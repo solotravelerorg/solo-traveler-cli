@@ -1,5 +1,9 @@
 from setuptools import setup, find_packages
 
+# Safely read README.md with UTF-8 encoding
+with open("README.md", encoding="utf-8") as f:
+    long_description = f.read()
+
 setup(
     name="solo-traveler-cli",
     version="0.1.0",
@@ -13,12 +17,12 @@ setup(
             "solo=solo_traveler_cli.main:app",
         ],
     },
-    author="Your Name",
-    author_email="your.email@example.com",
+    author="Brandon Himpfen",
+    author_email="brandon@himpfen.com",
     description="A CLI tool to help solo travelers plan trips, track expenses, pack efficiently, and journal their travels.",
-    long_description=open("README.md").read(),
+    long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/solo-traveler-cli",
+    url="https://github.com/solotravelerorg/solo-traveler-cli",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
